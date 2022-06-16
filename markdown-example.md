@@ -189,3 +189,54 @@ To create the header rows that are visually distinct from the rest of the conten
 |    C    |    D    |
 
 In principle, it’s not important that the pipes are located one below the other. This only increases the readability when the Markdown document is viewed in its raw version. The same applies to pipes located to the side. These are likewise inconsequential for the compiling process.
+
+## Footnotes
+
+Markdown gives you the option of inserting footnotes. You can write a reference number in the running text and link to the footnote at the end of the page – a corresponding line is created automatically. The reference number is also formatted as a hyperlink. Clicking on it leads directly to the relevant footnote. To use this automatic function, you should first insert the reference number after the respective word. In square brackets, you first write a circumflex and then the number.
+
+The number you use (other terms are also possible) does not matter. Just like when creating lists, Markdown automatically performs the counting for you. However, it’s important that you correctly link to the reference again for the footnote. Add the same number to a new line with a circumflex in a bracket, insert a colon and then write the actual footnote. It can also be fully formatted and encompass multiple lines.
+```
+You can easily place footnotes [^2] in the continuous text [^1].
+[^1]: Here you can find the text for the footnote.
+[^2]: **Footnotes** themselves can also be *formatted*.
+And these even include several lines.
+```
+You can easily place footnotes [^2] in the continuous text [^1].
+[^1]: Here you can find the text for the footnote.
+[^2]: **Footnotes** themselves can also be *formatted*.
+And these even include several lines.
+
+## & and <>
+
+Since Markdown is closely related to HTML, the “and” symbol as well as the less-than and greater-than sign deserve special attention.    
+These signs are used in HTML to open and close tags (<>) or to work with entities (&). But if you want to use the signs for their original purpose, they have to be masked in HTML: &, < and >. In general, there’s no reason in Markdown why you can’t use the signs “as they are”. However, since users have the possibility of mixing up Markdown with HTML, this is more complicated in practice. The parser understands when you want the simple characters and when you want HTML code so you don’t need to solve this problem yourself.
+```
+A & B
+&alpha;
+1 < 2
+<p>
+```
+A & B
+&alpha;
+1 < 2
+<p>
+## Backslash masking
+
+Besides the specific characters involved in HTML, Markdown also uses certain symbols as markups. When you insert them, the parser will respond to them during conversion. This pertains to the following signs:
+
+* Asterisk: *
+* Hyphen: -
+* Underscore: _
+* Round brackets: ()
+* Square brackets: []
+* Curly brackets: {}
+* Period: .
+* Exclamation mark: !
+* Pound: #
+* Accent grave: `
+* Backslash: \
+To use these signs for their original purpose, simply add a backslash in front of them. Important: The backslash must be entered before each individual sign, i.e. before an opening bracket and before a closing bracket.
+```
+This is an \*example with an asterisk\*.
+```
+This is an \*example with an asterisk\*.
