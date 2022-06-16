@@ -145,13 +145,47 @@ To do so, enter the language of the following source code after the three introd
 </html>
 ```
 ## Images & hyperlinks
-Markdown can likewise be used to integrate images and hyperlinks in your text. Both are created with a combination of square and round brackets. You can generate a link by placing the anchor text – i.e. the words or phrases visible in the text – in square brackets and inserting the URL in round brackets directly afterwards. If you’d like to give the hyperlink an optional title that the user can see in the mouseover, this is also possible: Enter the text in the round brackets, separated from the URL with a space and put in double quotation marks.
-
+Markdown can likewise be used to integrate images and hyperlinks in your text. Both are created with a combination of square and round brackets.    
+You can generate a link by placing the anchor text – i.e. the words or phrases visible in the text – in square brackets and inserting the URL in round brackets directly afterwards.  
+If you’d like to give the hyperlink an optional title that the user can see in the mouseover, this is also possible:    
+Enter the text in the round brackets, separated from the URL with a space and put in double quotation marks.
+```
 Here is a [Link](https://example.com/ "Optional link title").
-If you want to include a URL or an email address in the normal running text, most Markdown editors automatically create a clickable hyperlink. But to make sure this happens, you can insert a less-than and greater-than sign. To prevent this automatic editor feature, however, you should mark the URL as code and use backticks again.
+```
+Here is a [Link](https://example.com/ "Optional link title").
+
+If you want to include a URL or an email address in the normal running text, most Markdown editors automatically create a clickable hyperlink.    
+But to make sure this happens, you can insert a less-than and greater-than sign. To prevent this automatic editor feature, however, you should mark the URL as code and use backticks again.
 
 <https://example.com>
 `https://example.com`
-As with hyperlinks, images can also be added to the Markdown document. To add images, start with an exclamation mark. Afterwards again insert square brackets which contain the alternative text for the image and round brackets with the image URL. This is then directly displayed in the text.
 
+As with hyperlinks, images can also be added to the Markdown document. To add images, start with an exclamation mark. Afterwards again insert square brackets which contain the alternative text for the image and round brackets with the image URL. This is then directly displayed in the text.
+As with hyperlinks, images can also be added to the Markdown document. To add images, start with an exclamation mark. Afterwards again insert square brackets which contain the alternative text for the image and round brackets with the image URL.    
+This is then directly displayed in the text.
+```
 ![Here is an example](https://example.com/bild.jpg)
+```
+Images and hyperlinks can also be combined. To create a clickable link behind an image, you can nest the two functions together.    
+In this case, the image becomes the anchor text and thus appears in the square brackets.
+```
+[![Here is an example image](https://example.com/image.jpg)](https://example.com)
+```
+[![Here is an example image](https://example.com/image.jpg)](https://example.com)
+
+## Tables
+
+Pipes (|) allow tables to be drawn in Markdown. Each cell is separated by a pipe.   
+To create the header rows that are visually distinct from the rest of the content, you highlight the corresponding cells with hyphens.
+```
+|Column 1|Column 2|
+|--------|--------|
+|    A    |    B    |
+|    C    |    D    |
+```
+|Column 1|Column 2|
+|--------|--------|
+|    A    |    B    |
+|    C    |    D    |
+
+In principle, it’s not important that the pipes are located one below the other. This only increases the readability when the Markdown document is viewed in its raw version. The same applies to pipes located to the side. These are likewise inconsequential for the compiling process.
