@@ -220,9 +220,11 @@ A & B
 &alpha;
 1 < 2
 <p>
+
 ## Backslash masking
 
-Besides the specific characters involved in HTML, Markdown also uses certain symbols as markups. When you insert them, the parser will respond to them during conversion. This pertains to the following signs:
+Besides the specific characters involved in HTML, Markdown also uses certain symbols as markups. When you insert them, the parser will respond to them during conversion.    
+This pertains to the following signs:
 
 * Asterisk: *
 * Hyphen: -
